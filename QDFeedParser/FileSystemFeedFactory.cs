@@ -56,8 +56,7 @@ namespace QDFeedParser
             var result = FeedWorkerDelegate.EndInvoke(asyncResult);
             return result;
         }
-
-
+        
         protected readonly FileIOWorker FeedWorkerDelegate = new FileIOWorker(DownloadXmlFromUri);
 
         protected delegate FeedTuple FileIOWorker(Uri feeduri);
