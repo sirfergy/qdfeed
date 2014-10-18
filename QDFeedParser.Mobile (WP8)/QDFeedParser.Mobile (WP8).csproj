@@ -86,6 +86,9 @@
     <Compile Include="..\QDFeedParser %28NET45%29\BaseFeedFactory.async.cs">
       <Link>BaseFeedFactory.async.cs</Link>
     </Compile>
+    <Compile Include="..\QDFeedParser %28NET45%29\FileSystemFeedFactory.async.cs">
+      <Link>FileSystemFeedFactory.async.cs</Link>
+    </Compile>
     <Compile Include="..\QDFeedParser %28NET45%29\HttpFeedFactory.async.cs">
       <Link>HttpFeedFactory.async.cs</Link>
     </Compile>
@@ -124,6 +127,9 @@
     </Compile>
     <Compile Include="..\QDFeedParser\FeedType.cs">
       <Link>FeedType.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\FileSystemFeedFactory.cs">
+      <Link>FileSystemFeedFactory.cs</Link>
     </Compile>
     <Compile Include="..\QDFeedParser\HttpFeedFactory.cs">
       <Link>HttpFeedFactory.cs</Link>

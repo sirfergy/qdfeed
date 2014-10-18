@@ -22,18 +22,26 @@ namespace QDFeedParser
             : base(parser, instanceProvider)
         { }
 
-        public override bool PingFeed(Uri feeduri)
+        public 
+#if FRAMEWORK
+            override 
+#endif
+        bool PingFeed(Uri feeduri)
         {
             return File.Exists(feeduri.LocalPath);
         }
 
-        public override string DownloadXml(Uri feeduri)
+        public 
+#if FRAMEWORK 
+            override 
+#endif 
+            string DownloadXml(Uri feeduri)
         {
             if (!this.PingFeed(feeduri)) throw new MissingFeedException(string.Format("Was unable to open local XML file {0}", feeduri.LocalPath));
 
             return DownloadXmlFromUri(feeduri).FeedContent;
         }
-
+            
         //Hacking asynchronous file IO just to make the interface consistent - there's not much performance benefit otheriwse
         public override IAsyncResult BeginDownloadXml(Uri feeduri, AsyncCallback callback)
         {
