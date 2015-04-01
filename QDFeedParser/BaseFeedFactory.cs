@@ -58,7 +58,7 @@ namespace QDFeedParser
             var feedxml = this.DownloadXml(feeduri);
 #endif
 
-#if SILVERLIGHT || WINDOWS_PHONE
+#if SILVERLIGHT || WINDOWS_PHONE || PORTABLE
             var feedXmlResult = this.BeginDownloadXml(feeduri, null);
             var feedxml = this.EndDownloadXml(feedXmlResult).FeedContent;
 #endif
@@ -74,7 +74,7 @@ namespace QDFeedParser
             var feedxml = this.DownloadXml(feeduri);
 #endif
 
-#if SILVERLIGHT || WINDOWS_PHONE
+#if SILVERLIGHT || WINDOWS_PHONE || PORTABLE
             var feedXmlResult = this.BeginDownloadXml(feeduri, null);
             var feedxml = this.EndDownloadXml(feedXmlResult).FeedContent;
 #endif

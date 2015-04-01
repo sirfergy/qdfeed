@@ -118,12 +118,6 @@
     <Content Include="Test Files\Valid\HTTP\RSS.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\QDFeedParser\QDFeedParser.csproj">
-      <Project>{9276EC71-7DCA-4AAF-A4C2-F0B42964F4ED}</Project>
-      <Name>QDFeedParser</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>

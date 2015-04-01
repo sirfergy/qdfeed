@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E17D9D69-7BD2-4D00-AE25-0973B67D7CEC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QDFeedParser.Portable</RootNamespace>
+    <AssemblyName>QDFeedParser.Portable</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile32</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PORTABLE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;PORTABLE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
+    <TargetPlatform Include="Windows, Version=8.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\QDFeedParser\AsyncFeedRequestState.cs">
+      <Link>AsyncFeedRequestState.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\Atom10Feed.cs">
+      <Link>Atom10Feed.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\Atom10FeedItem.cs">
+      <Link>Atom10FeedItem.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\BaseFeedFactory.cs">
+      <Link>BaseFeedFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\BaseFeedItem.cs">
+      <Link>BaseFeedItem.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\BaseSyndicationFeed.cs">
+      <Link>BaseSyndicationFeed.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\DefaultFeedInstanceProvider.cs">
+      <Link>DefaultFeedInstanceProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\FeedTuple.cs">
+      <Link>FeedTuple.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\FeedType.cs">
+      <Link>FeedType.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\HttpFeedFactory.cs">
+      <Link>HttpFeedFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\IFeed.cs">
+      <Link>IFeed.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\IFeedFactory.cs">
+      <Link>IFeedFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\IFeedInstanceProvider.cs">
+      <Link>IFeedInstanceProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\IFeedItem.cs">
+      <Link>IFeedItem.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\QDFeedExceptions.cs">
+      <Link>QDFeedExceptions.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\Rss20Feed.cs">
+      <Link>Rss20Feed.cs</Link>
+    </Compile>
+    <Compile Include="..\QDFeedParser\Rss20FeedItem.cs">
+      <Link>Rss20FeedItem.cs</Link>
+    </Compile>
+    <Compile Include="..\qdfeedparser\xml\FeedXmlParserBase.cs">
+      <Link>Xml\FeedXmlParserBase.cs</Link>
+    </Compile>
+    <Compile Include="..\qdfeedparser\xml\IFeedXmlParser.cs">
+      <Link>Xml\IFeedXmlParser.cs</Link>
+    </Compile>
+    <Compile Include="..\qdfeedparser\xml\LinqFeedXmlParser.cs">
+      <Link>Xml\LinqFeedXmlParser.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
